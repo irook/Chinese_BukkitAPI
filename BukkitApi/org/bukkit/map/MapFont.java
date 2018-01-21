@@ -4,7 +4,7 @@ import java.util.HashMap;
 import org.bukkit.ChatColor;
 
 /**
- * Represents a bitmap font drawable to a map.
+ * 代表一种可绘制至地图的位图字体.
  */
 public class MapFont {
 
@@ -13,11 +13,14 @@ public class MapFont {
     protected boolean malleable = true;
 
     /**
-     * Set the sprite for a given character.
+     * 为给定的字符设置精灵.
      *
-     * @param ch The character to set the sprite for.
-     * @param sprite The CharacterSprite to set.
-     * @throws IllegalStateException if this font is static.
+     * 译注: 精灵是在游戏画面中独立的2D元素.
+     * 原文: Set the sprite for a given character.
+     *
+     * @param ch 给定的所要设置精灵的字符.
+     * @param sprite 需要设置的 CharacterSprite.
+     * @throws IllegalStateException 如果这个字体是静态的.
      */
     public void setChar(char ch, CharacterSprite sprite) {
         if (!malleable) {
@@ -31,11 +34,13 @@ public class MapFont {
     }
 
     /**
-     * Get the sprite for a given character.
+     * 获取给定字符的精灵.
      *
-     * @param ch The character to get the sprite for.
-     * @return The CharacterSprite associated with the character, or null if
-     *     there is none.
+     * 原文: Get the sprite for a given character.
+     *
+     * @param ch 需要获取精灵的字符.
+     * @return 与字符有关联的 CharacterSprite, 如果没有(有关联的 CharacterSprite)就为 null.
+     * 
      */
     public CharacterSprite getChar(char ch) {
         return chars.get(ch);
